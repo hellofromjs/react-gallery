@@ -19,6 +19,5 @@ export default ({ command, mode }) => {
 			}
 		},
 		base: process.env.VITE_BASE_ROUTE,
-		__APP_ENV__: JSON.stringify(process.env),
 	})
 }
