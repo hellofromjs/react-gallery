@@ -1,10 +1,10 @@
 import Photo from "../Photo/Photo";
 
-const Posts = ({ items }) => {
+const Posts = ({ items, onSwitch }) => {
 	return (
 		<div className="row">
 			{items.map((item, i) => {
-				return <Photo key={i} title={item.title} url={item.url} />;
+				return <Photo key={i} id={i} title={item.title} url={item.url} onSwitch={onSwitch} />;
 			})}
 		</div>
 	);
