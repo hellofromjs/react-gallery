@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // https://vitejs.dev/config/
-export default ({ command, mode }) => {
+export default ({ mode }) => {
 
 	process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
@@ -18,6 +18,6 @@ export default ({ command, mode }) => {
 				'~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
 			}
 		},
-		base: process.env.VITE_BASE_ROUTE,
+		base: `/${process.env.VITE_REPO_NAME}`,
 	})
 }
